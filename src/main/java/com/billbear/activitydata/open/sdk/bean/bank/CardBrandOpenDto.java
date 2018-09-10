@@ -2,6 +2,7 @@ package com.billbear.activitydata.open.sdk.bean.bank;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;
 import java.lang.Integer;
+import com.billbear.activitydata.open.sdk.bean.bank.CardLevelOpenDto;
 import java.util.List;
 
 /**
@@ -34,7 +35,7 @@ public class CardBrandOpenDto{
  
 	
 	@JsonProperty("cardLevelDtos")	
-	private List cardLevelDtos;                 
+	private List<CardLevelOpenDto> cardLevelDtos;                 
     
 
  
@@ -79,11 +80,11 @@ public class CardBrandOpenDto{
     
  
 	
-	public List getCardLevelDtos() {
+	public List<CardLevelOpenDto> getCardLevelDtos() {
 		return cardLevelDtos;
 	}
 
-	public void setCardLevelDtos(List cardLevelDtos) {
+	public void setCardLevelDtos(List<CardLevelOpenDto> cardLevelDtos) {
 		this.cardLevelDtos = cardLevelDtos;
 	}                
     

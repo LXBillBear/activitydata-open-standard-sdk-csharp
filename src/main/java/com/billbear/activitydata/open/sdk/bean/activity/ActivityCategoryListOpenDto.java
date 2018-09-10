@@ -2,6 +2,7 @@ package com.billbear.activitydata.open.sdk.bean.activity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.Integer;
 import java.lang.String;
+import com.billbear.activitydata.open.sdk.bean.activity.ActivityCategoryOpenDto;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ public class ActivityCategoryListOpenDto{
  
 	
 	@JsonProperty("children")	
-	private List children;                 
+	private List<ActivityCategoryOpenDto> children;                 
     
 
  
@@ -49,11 +50,11 @@ public class ActivityCategoryListOpenDto{
     
  
 	
-	public List getChildren() {
+	public List<ActivityCategoryOpenDto> getChildren() {
 		return children;
 	}
 
-	public void setChildren(List children) {
+	public void setChildren(List<ActivityCategoryOpenDto> children) {
 		this.children = children;
 	}                
     

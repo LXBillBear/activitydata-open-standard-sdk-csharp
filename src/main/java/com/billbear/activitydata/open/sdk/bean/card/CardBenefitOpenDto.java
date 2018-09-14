@@ -1,5 +1,6 @@
-package com.billbear.activitydata.open.sdk.bean.activity;
+package com.billbear.activitydata.open.sdk.bean.card;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
@@ -8,12 +9,12 @@ import java.util.Date;
  * @author billbear.sdk.tool
  *
  */
-public class ActivityOpenDto{
+public class CardBenefitOpenDto{
 
  
 	
 	@JsonProperty("id")	
-	private String id;                 
+	private Integer id;                 
     
  
 	
@@ -22,13 +23,8 @@ public class ActivityOpenDto{
     
  
 	
-	@JsonProperty("bigImgUrl")	
-	private String bigImgUrl;                 
-    
- 
-	
-	@JsonProperty("bankName")	
-	private String bankName;                 
+	@JsonProperty("content")	
+	private String content;                 
     
  
 	
@@ -39,6 +35,21 @@ public class ActivityOpenDto{
 	
 	@JsonProperty("category2")	
 	private String category2;                 
+    
+ 
+	
+	@JsonProperty("zoneInclude")	
+	private String zoneInclude;                 
+    
+ 
+	
+	@JsonProperty("availableTime")	
+	private String availableTime;                 
+    
+ 
+	
+	@JsonProperty("usageCount")	
+	private Integer usageCount;                 
     
  
 	@com.fasterxml.jackson.annotation.JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss, locale=zh")
@@ -52,32 +63,27 @@ public class ActivityOpenDto{
     
  
 	
-	@JsonProperty("availableTime")	
-	private String availableTime;                 
+	@JsonProperty("instruction")	
+	private String instruction;                 
     
  
 	
-	@JsonProperty("type")	
-	private String type;                 
+	@JsonProperty("periodType")	
+	private String periodType;                 
     
  
 	
-	@JsonProperty("payment")	
-	private String payment;                 
-    
- 
-	
-	@JsonProperty("payBrand")	
-	private String payBrand;                 
+	@JsonProperty("benefitType")	
+	private String benefitType;                 
     
 
  
 	
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}                
     
@@ -93,22 +99,12 @@ public class ActivityOpenDto{
     
  
 	
-	public String getBigImgUrl() {
-		return bigImgUrl;
+	public String getContent() {
+		return content;
 	}
 
-	public void setBigImgUrl(String bigImgUrl) {
-		this.bigImgUrl = bigImgUrl;
-	}                
-    
- 
-	
-	public String getBankName() {
-		return bankName;
-	}
-
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
+	public void setContent(String content) {
+		this.content = content;
 	}                
     
  
@@ -133,6 +129,36 @@ public class ActivityOpenDto{
     
  
 	
+	public String getZoneInclude() {
+		return zoneInclude;
+	}
+
+	public void setZoneInclude(String zoneInclude) {
+		this.zoneInclude = zoneInclude;
+	}                
+    
+ 
+	
+	public String getAvailableTime() {
+		return availableTime;
+	}
+
+	public void setAvailableTime(String availableTime) {
+		this.availableTime = availableTime;
+	}                
+    
+ 
+	
+	public Integer getUsageCount() {
+		return usageCount;
+	}
+
+	public void setUsageCount(Integer usageCount) {
+		this.usageCount = usageCount;
+	}                
+    
+ 
+	
 	public Date getStartDate() {
 		return startDate;
 	}
@@ -153,42 +179,32 @@ public class ActivityOpenDto{
     
  
 	
-	public String getAvailableTime() {
-		return availableTime;
+	public String getInstruction() {
+		return instruction;
 	}
 
-	public void setAvailableTime(String availableTime) {
-		this.availableTime = availableTime;
+	public void setInstruction(String instruction) {
+		this.instruction = instruction;
 	}                
     
  
 	
-	public String getType() {
-		return type;
+	public String getPeriodType() {
+		return periodType;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setPeriodType(String periodType) {
+		this.periodType = periodType;
 	}                
     
  
 	
-	public String getPayment() {
-		return payment;
+	public String getBenefitType() {
+		return benefitType;
 	}
 
-	public void setPayment(String payment) {
-		this.payment = payment;
-	}                
-    
- 
-	
-	public String getPayBrand() {
-		return payBrand;
-	}
-
-	public void setPayBrand(String payBrand) {
-		this.payBrand = payBrand;
+	public void setBenefitType(String benefitType) {
+		this.benefitType = benefitType;
 	}                
     
 

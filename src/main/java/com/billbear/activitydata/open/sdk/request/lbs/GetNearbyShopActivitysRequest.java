@@ -6,7 +6,6 @@ import com.billbear.activitydata.open.sdk.util.JsonUtil;
 import com.billbear.activitydata.open.sdk.request.BaseRequest;
 import java.lang.Double;
 import java.lang.Integer;
-import java.lang.String;
 import com.billbear.activitydata.open.sdk.response.lbs.GetNearbyShopActivitysResponse;
 
 /**
@@ -26,7 +25,7 @@ public class GetNearbyShopActivitysRequest extends BaseRequest<GetNearbyShopActi
 	private Integer cityId;                 
     
  
-	private String activityId;                 
+	private Integer districtId;                 
     
  
 	private Integer pageNo;                 
@@ -71,12 +70,12 @@ public class GetNearbyShopActivitysRequest extends BaseRequest<GetNearbyShopActi
  
 
   	
-	public String getActivityId() {
-		return activityId;
+	public Integer getDistrictId() {
+		return districtId;
 	}
 
-	public void setActivityId(String activityId) {
-		this.activityId = activityId;
+	public void setDistrictId(Integer districtId) {
+		this.districtId = districtId;
 	}                
     
  
@@ -114,7 +113,7 @@ public class GetNearbyShopActivitysRequest extends BaseRequest<GetNearbyShopActi
 	    map.put("latitude", this.getLatitude());
 	    map.put("longitude", this.getLongitude());
 	    map.put("city_id", this.getCityId());
-	    map.put("activity_id", this.getActivityId());
+	    map.put("district_id", this.getDistrictId());
 	    map.put("page_no", this.getPageNo());
 	    map.put("page_size", this.getPageSize());
 	    return JsonUtil.toJson(map);

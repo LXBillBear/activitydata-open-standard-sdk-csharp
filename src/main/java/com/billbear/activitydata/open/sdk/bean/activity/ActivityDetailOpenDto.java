@@ -2,7 +2,6 @@ package com.billbear.activitydata.open.sdk.bean.activity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.lang.String;
 import java.util.Date;
-import java.lang.Integer;
 
 /**
  * 
@@ -48,13 +47,28 @@ public class ActivityDetailOpenDto{
     
  
 	
-	@JsonProperty("category")	
-	private String category;                 
+	@JsonProperty("category1")	
+	private String category1;                 
+    
+ 
+	
+	@JsonProperty("category2")	
+	private String category2;                 
     
  
 	
 	@JsonProperty("type")	
 	private String type;                 
+    
+ 
+	
+	@JsonProperty("payment")	
+	private String payment;                 
+    
+ 
+	
+	@JsonProperty("payBrand")	
+	private String payBrand;                 
     
  
 	
@@ -84,7 +98,7 @@ public class ActivityDetailOpenDto{
  
 	
 	@JsonProperty("subjectType")	
-	private Integer subjectType;                 
+	private String subjectType;                 
     
 
  
@@ -159,12 +173,22 @@ public class ActivityDetailOpenDto{
     
  
 	
-	public String getCategory() {
-		return category;
+	public String getCategory1() {
+		return category1;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setCategory1(String category1) {
+		this.category1 = category1;
+	}                
+    
+ 
+	
+	public String getCategory2() {
+		return category2;
+	}
+
+	public void setCategory2(String category2) {
+		this.category2 = category2;
 	}                
     
  
@@ -175,6 +199,26 @@ public class ActivityDetailOpenDto{
 
 	public void setType(String type) {
 		this.type = type;
+	}                
+    
+ 
+	
+	public String getPayment() {
+		return payment;
+	}
+
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}                
+    
+ 
+	
+	public String getPayBrand() {
+		return payBrand;
+	}
+
+	public void setPayBrand(String payBrand) {
+		this.payBrand = payBrand;
 	}                
     
  
@@ -229,11 +273,11 @@ public class ActivityDetailOpenDto{
     
  
 	
-	public Integer getSubjectType() {
+	public String getSubjectType() {
 		return subjectType;
 	}
 
-	public void setSubjectType(Integer subjectType) {
+	public void setSubjectType(String subjectType) {
 		this.subjectType = subjectType;
 	}                
     

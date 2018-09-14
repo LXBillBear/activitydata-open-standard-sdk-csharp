@@ -16,16 +16,13 @@ import com.billbear.activitydata.open.sdk.response.card.GetCardsResponse;
 public class GetCardsRequest extends BaseRequest<GetCardsResponse> {
 
  
-	private String ids;                 
+	private String bankIds;                 
     
  
-	private Integer bankId;                 
+	private String cardBrandIds;                 
     
  
-	private Integer cardBrandId;                 
-    
- 
-	private Integer cardLevelId;                 
+	private String cardLevelIds;                 
     
  
 	private Integer pageNo;                 
@@ -37,45 +34,34 @@ public class GetCardsRequest extends BaseRequest<GetCardsResponse> {
  
 
   	
-	public String getIds() {
-		return ids;
+	public String getBankIds() {
+		return bankIds;
 	}
 
-	public void setIds(String ids) {
-		this.ids = ids;
+	public void setBankIds(String bankIds) {
+		this.bankIds = bankIds;
 	}                
     
  
 
   	
-	public Integer getBankId() {
-		return bankId;
+	public String getCardBrandIds() {
+		return cardBrandIds;
 	}
 
-	public void setBankId(Integer bankId) {
-		this.bankId = bankId;
+	public void setCardBrandIds(String cardBrandIds) {
+		this.cardBrandIds = cardBrandIds;
 	}                
     
  
 
   	
-	public Integer getCardBrandId() {
-		return cardBrandId;
+	public String getCardLevelIds() {
+		return cardLevelIds;
 	}
 
-	public void setCardBrandId(Integer cardBrandId) {
-		this.cardBrandId = cardBrandId;
-	}                
-    
- 
-
-  	
-	public Integer getCardLevelId() {
-		return cardLevelId;
-	}
-
-	public void setCardLevelId(Integer cardLevelId) {
-		this.cardLevelId = cardLevelId;
+	public void setCardLevelIds(String cardLevelIds) {
+		this.cardLevelIds = cardLevelIds;
 	}                
     
  
@@ -110,10 +96,9 @@ public class GetCardsRequest extends BaseRequest<GetCardsResponse> {
 	@Override
 	public String getAppParams() throws IOException {
 		Map<String, Object> map = new TreeMap<String,Object>();
-	    map.put("ids", this.getIds());
-	    map.put("bank_id", this.getBankId());
-	    map.put("card_brand_id", this.getCardBrandId());
-	    map.put("card_level_id", this.getCardLevelId());
+	    map.put("bank_ids", this.getBankIds());
+	    map.put("card_brand_ids", this.getCardBrandIds());
+	    map.put("card_level_ids", this.getCardLevelIds());
 	    map.put("page_no", this.getPageNo());
 	    map.put("page_size", this.getPageSize());
 	    return JsonUtil.toJson(map);

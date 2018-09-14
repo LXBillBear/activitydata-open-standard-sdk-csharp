@@ -4,9 +4,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import com.billbear.activitydata.open.sdk.util.JsonUtil;
 import com.billbear.activitydata.open.sdk.request.BaseRequest;
+import java.lang.String;
 import java.lang.Double;
 import java.lang.Integer;
-import java.lang.String;
 import com.billbear.activitydata.open.sdk.response.shop.GetShopsResponse;
 
 /**
@@ -17,6 +17,9 @@ import com.billbear.activitydata.open.sdk.response.shop.GetShopsResponse;
 public class GetShopsRequest extends BaseRequest<GetShopsResponse> {
 
  
+	private String activityId;                 
+    
+ 
 	private Double latitude;                 
     
  
@@ -26,15 +29,23 @@ public class GetShopsRequest extends BaseRequest<GetShopsResponse> {
 	private Integer cityId;                 
     
  
-	private String activityId;                 
-    
- 
 	private Integer pageNo;                 
     
  
 	private Integer pageSize;                 
     
 
+ 
+
+  	
+	public String getActivityId() {
+		return activityId;
+	}
+
+	public void setActivityId(String activityId) {
+		this.activityId = activityId;
+	}                
+    
  
 
   	
@@ -71,17 +82,6 @@ public class GetShopsRequest extends BaseRequest<GetShopsResponse> {
  
 
   	
-	public String getActivityId() {
-		return activityId;
-	}
-
-	public void setActivityId(String activityId) {
-		this.activityId = activityId;
-	}                
-    
- 
-
-  	
 	public Integer getPageNo() {
 		return pageNo;
 	}
@@ -111,10 +111,10 @@ public class GetShopsRequest extends BaseRequest<GetShopsResponse> {
 	@Override
 	public String getAppParams() throws IOException {
 		Map<String, Object> map = new TreeMap<String,Object>();
+	    map.put("activity_id", this.getActivityId());
 	    map.put("latitude", this.getLatitude());
 	    map.put("longitude", this.getLongitude());
 	    map.put("city_id", this.getCityId());
-	    map.put("activity_id", this.getActivityId());
 	    map.put("page_no", this.getPageNo());
 	    map.put("page_size", this.getPageSize());
 	    return JsonUtil.toJson(map);
